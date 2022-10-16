@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="fundo">
+    <div>
+      <h1 class="text"> Caça-Palavras Tecnologia</h1>
+        <script>
+            matriz= new Array;
+            maux= new Array;
+
+            matriz =[["C","O","J","A","V","A","L","C","D","T","D","W","Q","A","B","J","Q","E","F"], 
+                    ["A","G","I","T","Q","D","B","C","D","Y","A","H","T","S","Q","S","H","M","T"], 
+                    ["F","B","k","C","T","R","N","A","D","k","F","A","F","W","C","A","B","C","D"],
+                    ["E","G","E","P","Q","l","D","C","D","i","E","R","E","Y","P","K","S","F","L"], 
+                    ["F","B","C","H","T","L","O","G","I","N","H","D","P","Z","F","C","D","H","Q"],
+                    ["S","H","M","T","R","O","B","C","D","T","A","W","U","I","O","L","G","A","J"],
+                    ["É","T","Z","M","I","P","A","B","C","D","M","A","O","J","L","L","G","M","J"],
+                    ["S","M","R","L","O","Z","B","C","D","T","X","R","F","M","H","L","G","Y","J"],
+                    ["A","L","Z","K","I","P","A","B","C","D","H","E","B","X","U","B","C","S","H"], 
+                    ["S","G","G","O","H","A","B","C","D","T","L","G","A","J","L","B","C","Q","H"],
+                    ["S","G","G","O","H","A","B","C","D","T","L","G","A","J","L","B","C","L","H"],
+                    ["S","X","M","L","H","A","B","C","D","T","C","S","S","J","L","N","A","D","k"],
+                    ["S","G","G","O","H","A","B","C","D","T","L","G","A","J","L","N","A","D","k"],
+                    ["S","C","O","D","I","G","O","C","D","T","L","G","A","J","L","N","A","D","k"],
+                    ["S","G","G","O","H","A","B","C","D","T","S","O","F","T","W","A","R","E","k"],
+                    ["S","G","G","O","H","A","B","C","D","T","L","G","A","J","L","N","A","D","k"],
+                    ["S","G","G","T","A","G","B","C","D","T","L","G","A","J","L","N","A","D","k"],
+                    ["S","G","G","O","H","A","B","C","D","T","L","G","A","J","L","N","A","D","k"]];
+
+            maux =[[0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0], 
+                [0,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0], 
+                [0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0], 
+                [0,0,0,0,0,1,1,1,1,1,0,1,0,0,0,0,0,0,0],
+                [0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+                [0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0],
+                [0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0],
+                [0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+                [0,1,1,1,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]; 
+
+                            
+                document.write("<div>"); 
+                    document.write("<table border='2'>");
+                    for(linha=0; linha<18; linha++){
+                        document.write("<tr>");
+                            for(coluna=0; coluna<19; coluna++){
+                                document.write("<td id='"+ linha.toString()+'-'+coluna.toString()+"'>"+matriz[linha][coluna]+"</td>");
+                                if(maux[linha][coluna] == 1){
+                                document.getElementById(linha.toString()+'-'+coluna.toString()).style.background='#F986C7';
+                                }            
+                            }
+                            document.write("</tr>");
+                        }
+                    document.write("</table>");
+                document.write("</div>");      
+        </script>     
+    </div>
+</body>
+</html>
